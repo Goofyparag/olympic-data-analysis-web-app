@@ -1,127 +1,125 @@
-🏅 Olympic Data Analysis Web App
-📌 Live App
+# 🏅 Olympic Data Analysis Web App
 
-👉 Streamlit Deployment:
+### 📌 Live App  
+👉 **Streamlit Deployment:**  
 https://olympic-data-analysis-web-app-am3jfyvy4gxsad7yi4xbug.streamlit.app/
 
-📖 Overview
+---
 
-This interactive Olympic Data Analysis Web App allows users to explore over 120 years of Olympic history using powerful visualizations and analytics.
-Built with Python, Pandas, Plotly, Seaborn, and Streamlit, the app provides insights into:
+## 📖 Overview
 
-🥇 Country performance over time
+This **interactive Olympic Data Analysis Web App** allows users to explore **120+ years** of Olympic history through dynamic visualizations and meaningful analytics.
 
-🧍‍♂️ Athlete demographics (age, height, weight)
+Built using **Python, Pandas, Plotly, Seaborn, Matplotlib, and Streamlit**, the app provides deep insights into:
 
-🎯 Most successful athletes and nations
+- 🥇 Country performance over time  
+- 🧍‍♂️ Athlete demographics (age, height, weight)  
+- 🎯 Most successful athletes & nations  
+- 📅 Trends in participation  
+- 🏆 Medal tallies by year, country, and sport  
 
-📅 Trends in participation throughout Olympic history
+The app uses:
+- `athlete_events.csv` → Historical Olympic dataset  
+- `noc_regions.csv` → Country mapping  
 
-🏆 Medal tallies by year, country, and sport
+---
 
-The app uses the official Olympics dataset (athlete_events.csv) and country mapping (noc_regions.csv) to generate dynamic, high-quality visualizations.
+## 🚀 Features
 
-🚀 Features
-🔹 Home Dashboard
+### 🔹 **Home Dashboard**
+- Total athletes, nations, sports, and medal count  
+- Timeline and participation trends  
 
-Summary of total athletes, sports, nations, and medals.
+### 🔹 **Medal Tally Analyzer**
+Filter medals by:
+- Year  
+- Country  
+- Sport  
+Includes dynamic plots and medal counts  
 
-Timeline visualizations and participation trends.
+### 🔹 **Athlete Analysis**
+- Age distribution  
+- Height vs Weight scatterplots  
+- Gender-wise comparisons  
+- Trends of medal-winning athletes  
 
-🔹 Medal Tally Analyzer
+### 🔹 **Country-wise Analysis**
+- Most successful athletes from selected country  
+- Medal performance by sport  
+- Participation timeline  
 
-View medals by:
+### 🔹 **Global Trends**
+- Line charts for growth of events, countries, and athletes over time  
 
-Year
+---
 
-Country
+## 🗂️ Project Structure
 
-Sport
+```
+├── app.py                   # Main Streamlit app
+├── helper.py                # Data transformation utilities
+├── preprocessor.py          # Data cleaning & merging
+├── athlete_events.csv.gz    # Compressed dataset (<25MB for deployment)
+├── noc_regions.csv          # Country-region mapping
+├── requirements.txt         # Dependencies
+└── README.md                # Documentation
+```
 
-Dynamic filtering and visual output.
+---
 
-🔹 Athlete Analysis
+## 🛠️ Installation (Local Setup)
 
-Age distribution plots
-
-Height–Weight scatterplots
-
-Gender-based comparisons
-
-Medal-winning athlete patterns
-
-🔹 Country-wise Deep Dive
-
-Most successful athletes from a selected country
-
-Sport-wise medal charts
-
-Participation timeline
-
-🔹 Global Trends
-
-Line charts showing growth of countries, events, and athletes over years.
-
-🗂️ Project Structure
-├── app.py                 # Main Streamlit app
-├── helper.py              # Data transformation utilities
-├── preprocessor.py        # Data cleaning and merging
-├── athlete_events.csv.gz  # Compressed dataset (<25 MB for Streamlit)
-├── noc_regions.csv        # Country–region mapping
-├── requirements.txt       # Dependencies for Streamlit Cloud
-└── README.md              # Project documentation
-
-🛠️ Installation (Local Setup)
-
-Clone the repo:
-
+### **1. Clone the repository**
+```bash
 git clone https://github.com/Goofyparag/olympic-data-analysis-web-app.git
 cd olympic-data-analysis-web-app
+```
 
-
-Install dependencies:
-
+### **2. Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-
-Run the Streamlit app:
-
+### **3. Run the Streamlit app**
+```bash
 streamlit run app.py
+```
 
-📊 Dataset Information
-1. athlete_events.csv
+---
 
-Contains historical Olympic athlete data (1896–2016)
+## 📊 Dataset Information
 
-Includes:
+### **athlete_events.csv**
+Contains athlete data from **1896 to 2016**, including:
+- Age, Height, Weight  
+- Year, City, Sport, Event  
+- Medal (Gold/Silver/Bronze)  
+- NOC (Nationality)  
 
-Age, Height, Weight
+### **noc_regions.csv**
+Maps NOC codes to:
+- Country Name  
+- Region  
 
-Year, City, Sport, Event
+---
 
-Medal information
+## 🧰 Tech Stack
 
-Nationality (NOC)
+| Component       | Technology                       |
+|----------------|-----------------------------------|
+| Web Framework  | Streamlit                         |
+| Data Processing| Pandas, NumPy                     |
+| Visualization  | Plotly, Seaborn, Matplotlib       |
+| Deployment     | Streamlit Community Cloud         |
+| Language       | Python 3.10+                      |
 
-2. noc_regions.csv
+---
 
-Maps National Olympic Committee (NOC) codes to:
+## 📦 Requirements
 
-Full country name
+Your `requirements.txt` should include:
 
-Region
-
-🧰 Tech Stack
-Component	Technology
-Web Framework	Streamlit
-Data Processing	Pandas, NumPy
-Visualization	Plotly, Seaborn, Matplotlib
-Deployment	Streamlit Community Cloud
-Language	Python 3.10+
-📦 Requirements
-
-Your requirements.txt includes:
-
+```
 streamlit
 pandas
 numpy
@@ -129,26 +127,37 @@ plotly
 seaborn
 matplotlib
 scipy
+```
 
-🌟 Screenshots (Optional — add if needed)
+---
 
-You can add screenshots like:
+## 🌟 Screenshots (Optional)
 
-![Home Dashboard](images/dashboard.png)
-![Medal Analysis](images/medal_analysis.png)
+You can add screenshots here:
 
-🙌 Acknowledgements
+```
+![Home Dashboard](link_here)
+![Medal Analysis](link_here)
+```
 
-Dataset sourced from:
-📊 Kaggle — 120 Years of Olympic History
+---
+
+## 🙌 Acknowledgements
+
+Dataset sourced from:  
+📊 **Kaggle – 120 Years of Olympic History**  
 https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results
 
-📬 Contact
+---
 
-Author: Parag Tiwari
-📧 Email: paragt2005@gmail.com
-🔗 GitHub: https://github.com/Goofyparag
+## 📬 Contact
 
-⭐ Support
+**Author:** Parag Tiwari  
+📧 Email: **paragt2005@gmail.com**  
+🔗 GitHub: https://github.com/Goofyparag  
 
-If you like this project, consider giving the repository a ⭐ star on GitHub!
+---
+
+## ⭐ Support  
+If you like this project, consider giving the repo a **⭐ star**!
+
